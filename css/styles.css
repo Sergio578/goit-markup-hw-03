@@ -1,28 +1,63 @@
 body {
   font-family: "Roboto", sans-serif, Arial, Helvetica;
-  color: var(--brand-colors);
-  background-color: #e5e5e5;
+  background-color: var(--white);
 }
 
 :root {
-  --brand-color: #2196f3;
-  --brand-colors: #212121;
-  --brandColor: #757575;
+  --special: #2196f3;
+  --black: #212121;
+  --gray: #757575;
   --color: #2f303a;
+  --white: #fff;
+}
+
+header {
+  background-color: var(--white);
+  border: 1px solid #ececec;
 }
 
 .container {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
+  width: 1200px;
+  /* height: 80px;
+  margin: 0 auto; */
 }
 
-.flex-container {
-  height: 80px;
+header > .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  height: 80px;
+  margin: 0 auto;
+}
+
+header > .container :nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+header > .container :nth-child(1) > nav {
+  margin-left: 93px;
+}
+
+header > .container :nth-child(1) > nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+header > .container :nth-child(1) > nav > ul > li {
+  margin-right: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--special);
 }
 
 /* estilos para las listas de encabezados */
@@ -39,7 +74,6 @@ body {
 
 .links {
   width: 281px;
-  /* margin-left: -300px; */
 }
 
 .list-item {
@@ -56,14 +90,14 @@ body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   display: inline-block;
   width: 145px;
-  color: var(--brand-color);
+  color: var(--special);
   font-size: 26px;
   line-height: 1.1;
   font-weight: 700;
 }
 
 .link-navigation {
-  color: var(--brand-colors);
+  color: var(--black);
   font-size: 14px;
   line-height: 1.7;
 }
@@ -99,18 +133,10 @@ body {
   font-weight: 500;
 }
 
-.link-navigation:hover {
-  color: var(--brand-color);
-}
-
 .link-contact {
-  color: var(--brandColor);
+  color: var(--gray);
   font-size: 14px;
   line-height: 1.7;
-}
-
-.link-contact:hover {
-  color: var(--brand-color);
 }
 
 /* estilos titulo principal y boton */
@@ -138,7 +164,7 @@ body {
 .button:hover,
 .button:active {
   cursor: pointer;
-  background-color: var(--brand-color);
+  background-color: var(--special);
   color: #f5f4fa;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -154,7 +180,6 @@ body {
   background-color: #ffffff;
   border: 1px solid var(--color);
 }
-
 
 /* estilos parrafos de contenido */
 .section-paragraph {
@@ -179,7 +204,7 @@ body {
 }
 
 .paragraph {
-  color: var(--brandColor);
+  color: var(--gray);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
@@ -196,7 +221,7 @@ body {
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--brand-colors);
+  color: var(--black);
 }
 
 .section-images {
@@ -222,7 +247,7 @@ body {
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--brand-colors);
+  color: var(--black);
 }
 
 .section-equipment {
@@ -248,8 +273,8 @@ body {
 
 /* estilos para el pie de pagina */
 
-.container-footer {
-  background-color: var(--brand-colors);
+footer {
+  background-color: var(--color);
   height: 252px;
   display: flex;
   flex-direction: column;
@@ -285,13 +310,14 @@ body {
   width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 106px;
+  margin-bottom: 82px;
 }
 
 .flex-portfolio {
   margin-left: auto;
   margin-right: auto;
   width: 611px;
-
 }
 
 .list-portfolio {
@@ -309,7 +335,7 @@ body {
 }
 
 .link-item {
-  flex-basis: calc((100% - 8px)/4);
+  flex-basis: calc((100% - 8px) / 4);
 }
 
 .item1 {
@@ -345,11 +371,11 @@ body {
 }
 
 .images-card {
-  flex-basis: calc((100% - 30px)/8);
+  flex-basis: calc((100% - 30px) / 8);
 }
 
 .card-title {
-  color: var(--brand-colors);
+  color: var(--black);
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
@@ -365,11 +391,11 @@ body {
 }
 
 .card-title {
-  left: calc(50% - 322px/2 - 392px);
+  left: calc(50% - 322px / 2 - 392px);
 }
 
 .paragraph-text {
-  top: calc(50% - 36px/2 - 359px);
+  top: calc(50% - 36px / 2 - 359px);
   margin: 0;
 }
 
